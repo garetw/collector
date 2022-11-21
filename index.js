@@ -375,13 +375,13 @@ const main = async () => {
 
       // experimental:
       // create 6 new points, one for every joint in the robot arm and randomize, then write their angles to influxdb
-      // let joint1 = point('joint_1', { angle: Math.random() * 360 }, {}, TIME)
-      // let joint2 = point('joint_2', { angle: Math.random() * 360 }, {}, TIME)
-      // let joint3 = point('joint_3', { angle: Math.random() * 360 }, {}, TIME)
-      // let joint4 = point('joint_4', { angle: Math.random() * 360 }, {}, TIME)
-      // let joint5 = point('joint_5', { angle: Math.random() * 360 }, {}, TIME)
-      // let joint6 = point('joint_6', { angle: Math.random() * 360 }, {}, TIME)
-      // write.points([joint1, joint2, joint3, joint4, joint5, joint6])
+      let joint1 = point('joint_1', { angle: Math.random() * 360 }, {}, TIME)
+      let joint2 = point('joint_2', { angle: Math.random() * 360 }, {}, TIME)
+      let joint3 = point('joint_3', { angle: Math.random() * 360 }, {}, TIME)
+      let joint4 = point('joint_4', { angle: Math.random() * 360 }, {}, TIME)
+      let joint5 = point('joint_5', { angle: Math.random() * 360 }, {}, TIME)
+      let joint6 = point('joint_6', { angle: Math.random() * 360 }, {}, TIME)
+      write.points([joint1, joint2, joint3, joint4, joint5, joint6])
     }, INTERVAL)
   } catch (error) {
     log(error.toString())

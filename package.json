@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "mocha": "^10.1.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
+  },
+  "name": "collector",
+  "type": "module",
+  "description": "collects system info stats and sends them to influxdb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.32.0",
+    "@influxdata/influxdb-client-apis": "^1.32.0",
+    "systeminformation": "^5.14.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha index.test.js",
+    "lint": "prettier --write *.js",
+    "lint-json": "prettier --write *.json",
+    "eslint": "eslint --fix",
+    "lint-watch": "nodemon --exec \"(npm run lint) && (npm run eslint) && (npm run test)\""
+  },
+  "author": "Garet Wright",
+  "license": "MIT"
+}

@@ -1,0 +1,3 @@
+from(bucket: "development")
+    |> range(start: -15m)
+    |> filter(fn: (r) => r._measurement == "joint_1" or r._measurement == "joint_2" or r._measurement == "joint_3" or r._measurement == "joint_4" or r._measurement == "joint_5" or r._measurement == "joint_6")
